@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Phần header */
+#header{
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+
+/* Các phần tử bên trong header */
+    .nav_bar{
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 100px;
+        gap: 0.5rem;
+    }
+
+    .sign{
+        width: 150px;
+        height: 60px;
+        background: url('./img/sign_demo.png') center center / cover no-repeat;
+    }
+
+    .nav_right{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
+
+        .nav_item{
+            position: relative;
+            display: inline-block;
+            width: 120px;
+            height: 50px;
+        }
+
+        .nav_item a{
+            /* position: absolute; */
+            display: inline-block;
+            width: 100%;
+            font-size: 20px;
+            text-align: center;
+            text-decoration: none;
+            color: #c11522ff;
+            line-height: 50px;
+            transition-duration: 0.3s;
+        }
+
+        .nav_item:hover>a{
+            color: #fff;
+            background-color: #c11522ff;
+        }
+
+        .nav_list, .nav_btns{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            list-style: none;
+            gap: 0.5rem;    
+            /* gap để chỉnh khoảng cách giữa các nút */
+        }
+
+        .nav-arrow-down{
+            font-size: 14px;
+        }
+
+        .subnav{
+            position: absolute;
+            top: 100%;
+            left: 0; 
+            z-index: 1;
+            width: 120%;
+            background-color: #fff;
+            box-shadow: 0 0 2px #ccc;
+
+
+            list-style: none;
+            opacity: 0;
+            visibility: hidden;
+
+            .subnav_item a{
+                background-color: #fff;
+                color: #2d5569;
+            }
+
+            .subnav_item:hover>a{
+                color: #fff;
+                background-color: #2d5569;
+            }
+        }
+
+        .nav_shop:hover .subnav{
+            opacity: 1;
+            visibility:visible;
+        }
+
+
+
+
+        .wine_btn{
+            color: #2d5569;
+            border: solid 2px #ccc;
+            font-size: 20px;
+            padding: 15px 20px;
+            cursor: pointer;
+            transition-duration: 0.3s;
+        }
+        
+        .wine_btn:hover{
+            transform: scale(1.1);
+        }
+
+        .cart_btn{
+            color: #2d5569;
+            font-size: 20px;
+            cursor: pointer;
+            padding: 15px 20px;        
+        }
+
+        .cart_btn i{
+            /* đảo ngược cái icon xe hàng */
+            transform: rotateY(180deg);
+        }
+
+        .cart_quantity{
+            position: absolute;
+            height: 12px;
+            width: 12px;
+            background-color: #000;
+            color: #fff;
+            text-align: center;
+            font-size: 10px;
+            line-height: 12px;
+            margin: -7px 0px 0px -8px;
+            border-radius: 50%;
+           
+        }
+        
+        /* cho 3 cái dưới lên cùng 1 hàng */
+        .cart_btn p, .cart_btn i, .cart_quantity{
+            display: inline-block;
+        }
+        
+    }
+    
+}
